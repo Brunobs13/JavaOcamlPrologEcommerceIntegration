@@ -1,0 +1,18 @@
+application:
+  name: polyglot-commerce-integration-hub
+  environment: development
+
+runtime:
+  host: 0.0.0.0
+  port: 8080
+
+domain:
+  catalog_source: prolog_rules
+  legacy_modules:
+    - java
+    - ocaml
+    - prolog
+
+security:
+  secret_management: environment_variables
+  commit_scanning: enabled
