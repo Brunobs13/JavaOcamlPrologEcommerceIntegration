@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polyglot Commerce Integration Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="badge">Polyglot Integration Platform</p>
+      <h1>Commerce Operations Board</h1>
+      <p>Unified decision console for Java + OCaml + Prolog e-commerce pricing and order orchestration.</p>
+    </div>
+    <div id="health" class="pill">Checking health...</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls">
+      <h2>Order Composer</h2>
+
+      <label>
+        Customer
+        <select id="customer-select"></select>
+      </label>
+
+      <div class="actions">
+        <button id="quote-btn" class="btn primary">Generate Quote</button>
+        <button id="order-btn" class="btn success">Create Order</button>
+        <button id="reset-btn" class="btn ghost">Reset Session</button>
+      </div>
+
+      <div id="message" class="message">Ready.</div>
+
+      <h3>Integration Status</h3>
+      <ul id="integration-list" class="status-list"></ul>
+    </section>
+
+    <section class="panel catalog">
+      <div class="panel-head">
+        <h2>Product Catalog</h2>
+        <p>Click products to add/remove quantities in cart.</p>
+      </div>
+      <div id="catalog-grid" class="catalog-grid"></div>
+    </section>
+
+    <section class="panel cart">
+      <h2>Cart & Financials</h2>
+      <div id="cart-empty" class="empty">Cart is empty.</div>
+      <div id="cart-list" class="cart-list"></div>
+      <div id="quote-box" class="quote-box hidden">
+        <h3>Quote Breakdown</h3>
+        <div id="quote-lines" class="quote-lines"></div>
+        <div id="quote-totals" class="quote-totals"></div>
+      </div>
+    </section>
+
+    <section class="panel metrics">
+      <h2>Operational KPIs</h2>
+      <div id="metric-cards" class="metric-cards"></div>
+
+      <div class="split">
+        <div>
+          <h3>Recent Orders</h3>
+          <ul id="recent-orders" class="event-list"></ul>
+        </div>
+        <div>
+          <h3>Inventory Alerts</h3>
+          <ul id="inventory-alerts" class="event-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
